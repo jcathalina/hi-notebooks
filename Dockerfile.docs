@@ -10,8 +10,9 @@ RUN apt-get update && apt-get install -y \
     && uv venv .venv
 
 ENV PATH="/docs/.venv/bin:$PATH"
-COPY pyproject.toml requirements.lock ./
-RUN uv pip sync requirements.lock
+COPY docs/pyproject.toml /docs/pyproject.toml
+COPY docs/requirements.lock /docs/requirements.lock
+RUN uv pip sync /docs/requirements.lock
 
 COPY docs/ /docs/
 
