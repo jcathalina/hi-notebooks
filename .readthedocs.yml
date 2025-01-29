@@ -9,7 +9,7 @@ build:
       - pip install uv
       - uv venv .venv
       - source .venv/bin/activate
-      - uv pip sync requirements.lock
+      - uv pip sync docs/requirements.lock
 
 sphinx:
   configuration: docs/conf.py
