@@ -44,7 +44,7 @@ profile.json
 /docs/_build
 
 # Local docs for testing
-/built-docs
+/local-docs
 
 # Jupyter notebooks
 .ipynb_checkpoints

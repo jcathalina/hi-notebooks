@@ -7,4 +7,4 @@ if ! command -v python3 &> /dev/null; then
 fi
 
 # Navigate to the built-docs/ directory and start a simple HTTP server
-cd built-docs && python3 -m http.server 8000
+cd local-docs && python3 -m http.server 8000
