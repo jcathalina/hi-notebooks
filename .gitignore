@@ -39,3 +39,9 @@ profile.json
 # IDE
 .idea
 .vscode
+
+# Sphinx docs
+/docs/_build
+
+# Local docs for testing
+/built-docs
