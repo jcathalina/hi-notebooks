@@ -45,3 +45,6 @@ profile.json
 
 # Local docs for testing
 /built-docs
+
+# Jupyter notebooks
+.ipynb_checkpoints

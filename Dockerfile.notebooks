@@ -1,0 +1,19 @@
+FROM docker.io/pytorchlightning/pytorch_lightning
+
+WORKDIR /app
+
+RUN pip install uv
+
+RUN uv venv --system-site-packages .venv
+COPY pyproject.toml requirements.lock ./
+RUN uv pip install -r requirements.lock
+
+# Install Jupyter  TODO: Maybe remove this and just have it in the requirements.lock
+RUN uv pip install jupyterlab
+
+ENV PATH="/app/.venv/bin:$PATH"
+
+# Expose port for Jupyter
+EXPOSE 8888
+
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
