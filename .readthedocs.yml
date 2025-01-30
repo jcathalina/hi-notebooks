@@ -7,7 +7,7 @@ build:
   jobs:
     post_create_environment:
       - pip install uv
-      - uv venv .venv
+      - uv venv --system-site-packages .venv
       - . .venv/bin/activate
       - uv pip sync docs/requirements.lock
 
