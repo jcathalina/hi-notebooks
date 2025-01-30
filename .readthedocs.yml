@@ -8,7 +8,7 @@ build:
     post_create_environment:
       - pip install uv
       - uv venv .venv
-      - source .venv/bin/activate
+      - . .venv/bin/activate
       - uv pip sync docs/requirements.lock
 
 sphinx:
