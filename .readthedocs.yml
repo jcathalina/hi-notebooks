@@ -6,13 +6,14 @@ build:
     python: "3.11"
   jobs:
     post_create_environment:
-      - pip install uv
-      - uv venv .venv
-      - source .venv/bin/activate
-      - uv pip sync docs/requirements.lock
+      - python -m pip install sphinx_rtd_theme
 
 sphinx:
   configuration: docs/conf.py
 
 formats:
   - pdf
+
+python:
+  install:
+  - requirements: docs/requirements.lock
