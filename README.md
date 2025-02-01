@@ -5,8 +5,9 @@
 ```bash
 $ docker build -t notebooks -f Dockerfile.notebooks .
 ```
+replace `docker` with `podman` if you're using that.
 
-### Running the jupyter server through Podman
+### Running the jupyter server through Docker
 ```bash
 $ docker run --gpus=all --rm -it -p 8888:8888 -v $(pwd)/docs/notebooks:/app/docs/notebooks notebooks
 ```
